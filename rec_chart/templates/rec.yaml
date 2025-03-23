@@ -24,4 +24,3 @@ spec:
       cpu: "{{ .Values.requests.cpu }}"
       memory: "{{ .Values.requests.memory }}"
   username: {{ .Values.username }}
-  nodes: {{ .Values.nodes }}
