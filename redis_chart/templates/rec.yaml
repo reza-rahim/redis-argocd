@@ -3,6 +3,14 @@ kind: RedisEnterpriseCluster
 metadata:
   name: "{{ .Values.recname }}"
 spec:
+  nodes: "{{ .Values.nodes }}"
+  redisEnterpriseImageSpec:
+    repository: "{{ .Values.repository }}" 
+    versionTag: "{{ .Values.versionTag }}" 
+  redisEnterpriseServicesRiggerImageSpec:
+    repository: registry.connect.redhat.com/redislabs/services-manager
+  bootstrapperImageSpec:
+    repository: registry.connect.redhat.com/redislabs/redis-enterprise-operator
   persistentSpec:
     enabled: true
     volumeSize: "{{ .Values.volumeSize }}"
