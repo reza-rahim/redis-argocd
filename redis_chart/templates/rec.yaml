@@ -5,12 +5,14 @@ metadata:
 spec:
   nodes: "{{ .Values.nodes }}"
   redisEnterpriseImageSpec:
-    repository: "{{ .Values.repository }}" 
+    repository: "{{ .Values.redisEnterpriseImageSpec }}" 
     versionTag: "{{ .Values.versionTag }}" 
   redisEnterpriseServicesRiggerImageSpec:
-    repository: registry.connect.redhat.com/redislabs/services-manager
+    repository: "{{ .Values.redisEnterpriseServicesRiggerImageSpec }}" 
+    versionTag: "{{ .Values.versionTag }}" 
   bootstrapperImageSpec:
-    repository: registry.connect.redhat.com/redislabs/redis-enterprise-operator
+    repository: "{{ .Values.redisEnterpriseServicesRiggerImageSpec }}" 
+    versionTag: "{{ .Values.versionTag }}" 
   persistentSpec:
     enabled: true
     volumeSize: "{{ .Values.volumeSize }}"
