@@ -11,7 +11,7 @@ spec:
     repository: "{{ .Values.redisEnterpriseServicesRiggerImageSpec }}" 
     versionTag: "{{ .Values.versionTag }}" 
   bootstrapperImageSpec:
-    repository: "{{ .Values.redisEnterpriseServicesRiggerImageSpec }}" 
+    repository: "{{ .Values.bootstrapperImageSpec }}" 
     versionTag: "{{ .Values.versionTag }}" 
   persistentSpec:
     enabled: true
