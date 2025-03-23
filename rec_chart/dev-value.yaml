@@ -1,3 +1,4 @@
+recname: rec
 nodes: 3
 redisEnterpriseImageSpec: redislabs/redis-enterprise
 redisEnterpriseServicesRiggerImageSpec: redislabs/services-manager
@@ -12,6 +13,7 @@ requests:
 nodes: 3
 storageClass: "standard"
 volumeSize: "4000Mi"
-recname: rec
+
 username: test@example.com
 admissionWebhook: true
+pullSecrets: secret
