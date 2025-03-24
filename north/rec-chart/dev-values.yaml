@@ -1,19 +1,1 @@
-recname: rec
-nodes: 3
-redisEnterpriseImageSpec: redislabs/redis-enterprise
-redisEnterpriseServicesRiggerImageSpec: redislabs/services-manager
-bootstrapperImageSpec: redislabs/redis-enterprise-operator
-versionTag: 7.8.4-95
-limits:
-    cpu: "2000m"
-    memory: "2000Mi"
-requests:
-    cpu: "2000m"
-    memory: "2000Mi"
-nodes: 3
-storageClass: "standard"
-volumeSize: "4000Mi"
 
-username: test@example.com
-admissionWebhook: true
-pullSecrets: secret
