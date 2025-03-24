@@ -1,11 +1,18 @@
 
 
-## north/operator-chart
+# north/operator-chart
 
 ```
 operator-chart/
 ├── Chart.yaml
-├── values.yaml
+├── dev-values.yaml
+├── prod-values.yaml
 ├── templates/
 │   ├── bundle.yaml
 ```
+
+## ArgoCD application for dev env
+north/helm-dev-redis-operator-argo.yaml
+
+## ArgoCD application for prod env
+north/helm-prod-redis-operator-argo.yaml
