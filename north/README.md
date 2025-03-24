@@ -18,7 +18,7 @@ north/helm-dev-redis-operator-argo.yaml
 north/helm-prod-redis-operator-argo.yaml
 
 
-### k8 finalize 
+### remove k8 finalizers for rec 
 ```
 kubectl patch -n <namespace>  rec/rec --type=merge -p '{"metadata": {"finalizers":null}}'
 ```
