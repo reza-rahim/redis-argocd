@@ -11,7 +11,7 @@ spec:
     path: north/operator-chart  # Path to the directory containing Kubernetes YAMLs
     helm:
       valueFiles:
-      - values.yaml
+      - dev-values.yaml
   destination:
     server: https://kubernetes.default.svc  # Points to the in-cluster Kubernetes API
     namespace: dev                      #Namespace to deploy the application
