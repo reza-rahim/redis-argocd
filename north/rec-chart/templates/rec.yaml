@@ -1,9 +1,9 @@
 apiVersion: app.redislabs.com/v1
 kind: RedisEnterpriseCluster
 metadata:
-  name: rec
+  name: {{ .Values.recname }}
   labels:
     app: redis-enterprise
 spec:
   # Add fields here
-  nodes: 3
+  nodes: {{ .Values.nodes }}
