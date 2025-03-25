@@ -37,15 +37,15 @@ rec-chart/
 ```
 
 ### ArgoCD cluster application for dev env
-north/helm-dev-redis-operator-argo.yaml
+north/helm-dev-redis-rec-argo.yaml
 ```
-kubectl apply  -n argocd -f north/helm-dev-redis-operator-argo.yaml
+kubectl apply  -n argocd -f north/helm-dev-redis-rec-argo.yaml
 ```
 
 ### ArgoCD cluster application for prod env
-north/helm-prod-redis-operator-argo.yaml
+north/helm-prod-redis-rec-argo.yaml
 ```
-kubectl apply  -n argocd -f north/helm-prod-redis-operator-argo.yaml
+kubectl apply  -n argocd -f north/helm-prod-redis-rec-argo.yaml
 ```
 ---
 ## Misc
