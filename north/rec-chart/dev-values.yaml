@@ -4,7 +4,7 @@ nodes: 3
 
 redisEnterpriseImageSpec: redislabs/redis
 redisEnterpriseServicesRiggerImageSpec: redislabs/services-manager
-bootstrapperImageSpec: redislabs/redis-enterprise-operator
+bootstrapperImageSpec: redislabs/operator
 versionTag: 7.8.4-95
 
 limits:
