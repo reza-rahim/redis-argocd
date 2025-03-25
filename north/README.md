@@ -12,13 +12,13 @@ operator-chart/
 │   ├── bundle.yaml
 ```
 
-### ArgoCD application for dev env
+### ArgoCD Operator application for dev env
 north/helm-dev-redis-operator-argo.yaml
 ```
 kubectl apply  -n argocd -f north/helm-dev-redis-operator-argo.yaml
 ```
 
-### ArgoCD application for prod env
+### ArgoCD Operator application for prod env
 north/helm-prod-redis-operator-argo.yaml
 ```
 kubectl apply  -n argocd -f north/helm-prod-redis-operator-argo.yaml
@@ -36,6 +36,17 @@ rec-chart/
 │   ├── rec.yaml
 ```
 
+### ArgoCD cluster application for dev env
+north/helm-dev-redis-operator-argo.yaml
+```
+kubectl apply  -n argocd -f north/helm-dev-redis-operator-argo.yaml
+```
+
+### ArgoCD cluster application for prod env
+north/helm-prod-redis-operator-argo.yaml
+```
+kubectl apply  -n argocd -f north/helm-prod-redis-operator-argo.yaml
+```
 ---
 ## Misc
 ```
