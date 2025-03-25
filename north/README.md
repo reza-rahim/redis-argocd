@@ -64,7 +64,9 @@ kubectl patch -n dev  rec/rec --type=merge -p '{"metadata": {"finalizers":null}}
 kubectl delete  -n dev pvc redis-enterprise-storage-rec-0  redis-enterprise-storage-rec-1 redis-enterprise-storage-rec-2
 
 #log into a pod
-kubectl exec  -it -c redis-enterprise-node  -n dev rec-0 -- bash  
+kubectl exec  -it -c redis-enterprise-node  -n dev rec-0 -- bash
+
+kubectl exec  -it -c redis-enterprise-node  -n dev rec-0 -- bash -c 'rladmin status'
 ```
 
 ---
