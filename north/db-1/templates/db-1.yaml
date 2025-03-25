@@ -3,5 +3,5 @@ kind: RedisEnterpriseDatabase
 metadata:
   name: db-1
 spec:
-  memorySize: 100MB
-  databasePort: 12000
+  memorySize: {{ .Values.memorySize }}
+  databasePort: {{ .Values.databasePort }}
