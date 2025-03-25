@@ -1,2 +1,3 @@
 memorySize: 1GB
 databasePort: 12000
+shardCount: 2
