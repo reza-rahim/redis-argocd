@@ -65,7 +65,7 @@ kubectl exec  -it -c redis-enterprise-node  -n dev rec-0 -- bash
 ```
 
 ---
-## Deploy Redis Operator
+## Deploy Redis Database
 https://github.com/RedisLabs/redis-enterprise-k8s-docs/blob/master/redis_enterprise_database_api.md
 
 ```
