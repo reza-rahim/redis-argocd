@@ -23,7 +23,7 @@ spec:
     versionTag: {{ .Values.versionTag }}
   redisEnterpriseServicesRiggerImageSpec:
     repository: {{ .Values.redisEnterpriseServicesRiggerImageSpec }}
-    versionTag: {{ .Values.versionTag }}"
+    versionTag: {{ .Values.versionTag }}
   bootstrapperImageSpec:
     repository: {{ .Values.bootstrapperImageSpec }}
     versionTag: {{ .Values.versionTag }}
