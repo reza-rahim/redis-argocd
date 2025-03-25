@@ -1,1 +1,1 @@
-# argocd_public
+# Redis Argocd
