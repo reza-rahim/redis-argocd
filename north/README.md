@@ -1,4 +1,4 @@
-## ArgoCD
+## Deploying Redis Enterprise with ArgoCD
 
 ![Alt text](images/argoCD.png)
 ---
