@@ -80,6 +80,20 @@ db-1-chart/
 │   ├── db-1.yaml
 ```
 
+```
+db-2-chart/
+├── Chart.yaml
+├── dev-values.yaml
+├── prod-values.yaml
+├── templates/
+│   ├── db-2.yaml
+```
+
+```
+kubectl apply  -n argocd -f helm-dev-redis-db-1-argo.yaml
+kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
+```
+
 ---
 ## Upgrade
 
