@@ -1,6 +1,7 @@
 
-
-## north/operator-chart
+---
+## Deploy Redis Operator
+### north/operator-chart
 
 ```
 operator-chart/
@@ -24,7 +25,8 @@ kubectl apply  -n argocd -f north/helm-prod-redis-operator-argo.yaml
 ```
 ---
 
-## ## north/operator-chart
+## Deploy Redis Cluster
+### north/rec-chart
 ```
 rec-chart/
 ├── Chart.yaml
@@ -34,7 +36,8 @@ rec-chart/
 │   ├── rec.yaml
 ```
 
--------------------- Misc -----------------------
+---
+## Misc
 ```
 # Remove k8 finalizers for rec 
 kubectl patch -n <namespace>  rec/rec --type=merge -p '{"metadata": {"finalizers":null}}'
@@ -42,6 +45,6 @@ kubectl patch -n <namespace>  rec/rec --type=merge -p '{"metadata": {"finalizers
 # delete pvc 
 kubectl delete  -n dev pvc redis-enterprise-storage-rec-0  redis-enterprise-storage-rec-1 redis-enterprise-storage-rec-2
 ```
-
+---
 ## Upgrade
 
