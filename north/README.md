@@ -3,6 +3,8 @@
 ## Deploy Redis Operator
 ### north/operator-chart
 
+https://github.com/RedisLabs/redis-enterprise-k8s-docs/blob/master/redis_enterprise_cluster_api.md
+
 ```
 operator-chart/
 ├── Chart.yaml
@@ -48,7 +50,7 @@ north/helm-prod-redis-rec-argo.yaml
 kubectl apply  -n argocd -f north/helm-prod-redis-rec-argo.yaml
 ```
 ---
-## Misc
+## Misc cluster mgmt
 ```
 kubectl delete  -n dev rec rec --grace-period=0 --force
 
@@ -61,6 +63,20 @@ kubectl delete  -n dev pvc redis-enterprise-storage-rec-0  redis-enterprise-stor
 #log into a pod
 kubectl exec  -it -c redis-enterprise-node  -n dev rec-0 -- bash  
 ```
+
+---
+## Deploy Redis Operator
+https://github.com/RedisLabs/redis-enterprise-k8s-docs/blob/master/redis_enterprise_database_api.md
+
+```
+db-1-chart/
+├── Chart.yaml
+├── dev-values.yaml
+├── prod-values.yaml
+├── templates/
+│   ├── db-1.yaml
+```
+
 ---
 ## Upgrade
 
