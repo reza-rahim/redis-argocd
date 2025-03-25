@@ -15,7 +15,7 @@ requests:
     memory: "4000Mi"
 nodes: 3
 storageClass: "standard"
-volumeSize: "4000Mi"
+volumeSize: "8000Mi"
 
 username: test@example.com
 admissionWebhook: true
