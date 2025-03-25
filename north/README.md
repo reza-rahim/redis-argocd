@@ -50,8 +50,10 @@ kubectl apply  -n argocd -f north/helm-prod-redis-rec-argo.yaml
 ---
 ## Misc
 ```
+kubectl delete  -n dev rec rec --grace-period=0 --force
+
 # Remove k8 finalizers for rec 
-kubectl patch -n <namespace>  rec/rec --type=merge -p '{"metadata": {"finalizers":null}}'
+kubectl patch -n dev  rec/rec --type=merge -p '{"metadata": {"finalizers":null}}'
 
 # delete pvc 
 kubectl delete  -n dev pvc redis-enterprise-storage-rec-0  redis-enterprise-storage-rec-1 redis-enterprise-storage-rec-2
