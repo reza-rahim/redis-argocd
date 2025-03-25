@@ -11,4 +11,4 @@ spec:
   rolesPermissions:
     - acl: "Full Access"
       type: "redis-enterprise"
-      role: "Admin"
+      role: "None"
