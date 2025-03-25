@@ -1,9 +1,11 @@
 
+### Set up nginx ingress controler
 ```
 helm install nginx-ingress ingress-nginx/ingress-nginx \
   --set controller.extraArgs.enable-ssl-passthrough=true
 ```
 
+### Set up ingress 
 ```
 apiVersion: networking.k8s.io/v1
 kind: Ingress
