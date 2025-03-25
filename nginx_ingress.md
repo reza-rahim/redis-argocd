@@ -5,7 +5,11 @@ helm install nginx-ingress ingress-nginx/ingress-nginx \
   --set controller.extraArgs.enable-ssl-passthrough=true
 ```
 
-### Set up ingress 
+### Setup ingress 
+```
+kubectl apply -f redis-ui.yaml -n dev
+```
+
 ```
 apiVersion: networking.k8s.io/v1
 kind: Ingress
