@@ -1,4 +1,6 @@
+## ArgoCD
 
+![Alt text](images/argoCD.png)
 ---
 ## Deploy Redis Operator
 ### north/operator-chart
