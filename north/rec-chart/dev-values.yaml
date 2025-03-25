@@ -2,7 +2,7 @@
 recname: rec
 nodes: 3
 
-redisEnterpriseImageSpec: redislabs/redis-enterprise
+redisEnterpriseImageSpec: redislabs/redis
 redisEnterpriseServicesRiggerImageSpec: redislabs/services-manager
 bootstrapperImageSpec: redislabs/redis-enterprise-operator
 versionTag: 7.8.4-95
