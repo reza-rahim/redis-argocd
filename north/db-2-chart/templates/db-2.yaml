@@ -1,7 +1,13 @@
 apiVersion: app.redislabs.com/v1alpha1
 kind: RedisEnterpriseDatabase
 metadata:
-  name: db-1
+  name: db-2
 spec:
   memorySize: {{ .Values.memorySize }}
   databasePort: {{ .Values.databasePort }}
+  shardCount: {{ .Values.shardCount }}
+  replication: true
+  tlsMode: true
+  rolesPermissions:
+    - acl: "Full Access"
+      type: "redis-enterprise"
