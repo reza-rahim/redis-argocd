@@ -22,7 +22,17 @@ north/helm-prod-redis-operator-argo.yaml
 ```
 kubectl apply  -n argocd -f north/helm-prod-redis-operator-argo.yaml
 ```
+---
 
+## ## north/operator-chart
+```
+rec-chart/
+├── Chart.yaml
+├── dev-values.yaml
+├── prod-values.yaml
+├── templates/
+│   ├── rec.yaml
+```
 
 -------------------- Misc -----------------------
 ```
