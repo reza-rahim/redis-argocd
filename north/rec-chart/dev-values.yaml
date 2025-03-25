@@ -1,7 +1,11 @@
-versionTag: 7.8.4-95
 
 recname: rec
 nodes: 3
+
+redisEnterpriseImageSpec: redislabs/redis-enterprise
+redisEnterpriseServicesRiggerImageSpec: redislabs/services-manager
+bootstrapperImageSpec: redislabs/redis-enterprise-operator
+versionTag: 7.8.4-95
 
 limits:
     cpu: "2000m"
