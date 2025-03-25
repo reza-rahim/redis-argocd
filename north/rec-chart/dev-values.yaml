@@ -9,10 +9,10 @@ versionTag: 7.8.4-95
 
 limits:
     cpu: "2000m"
-    memory: "2000Mi"
+    memory: "4000Mi"
 requests:
     cpu: "2000m"
-    memory: "2000Mi"
+    memory: "4000Mi"
 nodes: 3
 storageClass: "standard"
 volumeSize: "4000Mi"
