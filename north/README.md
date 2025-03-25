@@ -5,7 +5,8 @@
 ## Deploy Redis Operator
 ### north/operator-chart
 
-https://github.com/RedisLabs/redis-enterprise-k8s-docs/blob/master/redis_enterprise_cluster_api.md
+[Redis Enterprise Cluster API](https://github.com/RedisLabs/redis-enterprise-k8s-docs/blob/master/redis_enterprise_cluster_api.md)
+
 
 ```
 operator-chart/
