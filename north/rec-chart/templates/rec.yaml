@@ -21,7 +21,5 @@ spec:
   redisEnterpriseImageSpec:
     repository: "{{ .Values.redisEnterpriseImageSpec }}"
     versionTag: "{{ .Values.versionTag }}"
-  redisEnterpriseServicesRiggerImageSpec:
-    repository: "{{ .Values.redisEnterpriseServicesRiggerImageSpec }}"
   bootstrapperImageSpec:
     repository: "{{ .Values.bootstrapperImageSpec }}"
