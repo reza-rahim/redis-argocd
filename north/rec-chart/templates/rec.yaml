@@ -18,12 +18,4 @@ spec:
       cpu: {{ .Values.requests.cpu }}
       memory: {{ .Values.requests.memory }}
   username: {{ .Values.username }}
-  redisEnterpriseImageSpec:
-    repository: {{ .Values.redisEnterpriseImageSpec }}
-    versionTag: {{ .Values.versionTag }}
-  redisEnterpriseServicesRiggerImageSpec:
-    repository: {{ .Values.redisEnterpriseServicesRiggerImageSpec }}
-    versionTag: {{ .Values.versionTag }}
-  bootstrapperImageSpec:
-    repository: {{ .Values.bootstrapperImageSpec }}
-    versionTag: {{ .Values.versionTag }}
+  
