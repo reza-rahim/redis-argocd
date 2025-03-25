@@ -1,6 +1,6 @@
 # Chart.yaml
 apiVersion: v2
-name: db-1-chart
+name: db-2-chart
 description: A simple Helm chart for redis db
 version: 0.1.0
 appVersion: "1.21.3"
