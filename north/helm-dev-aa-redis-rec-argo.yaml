@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/reza-rahim/argocd_public/  # Replace with your Git repository
     targetRevision: main         # Branch, tag, or commit SHA to deploy
-    path: north/rec-chart  # Path to the directory containing Kubernetes YAMLs
+    path: north/rec-aa-chart  # Path to the directory containing Kubernetes YAMLs
     helm:
       valueFiles:
       - dev-values.yaml
