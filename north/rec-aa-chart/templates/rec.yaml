@@ -4,9 +4,7 @@ metadata:
   name: {{ .Values.recname }}
   labels:
     app: redis-enterprise
-  annotations:
-    kubernetes.io/ingress.class: nginx 
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+
 spec:
   # Add fields here
   nodes: {{ .Values.nodes }}
@@ -32,3 +30,4 @@ spec:
     apiIngressUrl: {{ .Values.apiIngressUrl }}
     dbIngressSuffix:  {{ .Values.dbIngressSuffix }}
     method:  {{ .Values.method }}
+    ingressAnnotations: nginx 
