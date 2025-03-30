@@ -17,7 +17,7 @@ storageClass: "standard"
 volumeSize: "8000Mi"
 apiIngressUrl: api.apps.demo-1.ps-redis.com
 dbIngressSuffix: -cluster.apps.demo-1.ps-redis.com
-method: nginx
+method: ingress
 
 username: test@example.com
 admissionWebhook: true
