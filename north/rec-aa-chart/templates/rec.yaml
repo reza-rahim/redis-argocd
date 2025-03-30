@@ -4,6 +4,8 @@ metadata:
   name: {{ .Values.recname }}
   labels:
     app: redis-enterprise
+  annotations:
+    kubernetes.io/ingress.class: nginx 
 spec:
   # Add fields here
   nodes: {{ .Values.nodes }}
