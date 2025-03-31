@@ -30,6 +30,7 @@ spec:
     apiIngressUrl: {{ .Values.apiIngressUrl }}
     dbIngressSuffix:  {{ .Values.dbIngressSuffix }}
     method:  {{ .Values.method }}
+    # for nginx ingress controller
     ingressAnnotations: 
        ingress.kubernetes.io/ssl-passthrough: "true"
        kubernetes.io/ingress.class: "nginx" 
