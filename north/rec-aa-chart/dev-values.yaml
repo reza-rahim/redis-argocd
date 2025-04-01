@@ -18,7 +18,7 @@ volumeSize: "8000Mi"
 apiIngressUrl: api.apps.demo-1.ps-redis.com
 dbIngressSuffix: -cluster.apps.demo-1.ps-redis.com
 method: ingress
-
+ingressClass: nginx 
 username: test@example.com
 admissionWebhook: true
 pullSecrets: secret
