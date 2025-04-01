@@ -10,5 +10,5 @@ spec:
     databasePort:  {{ .Values.databasePort }}
     tlsMode: enabled 
   participatingClusters:
-      - name: rerc-demo-1
-      - name: rerc-demo-4
+      - name: {{ .Values.cluster-north }}
+      - name:  {{ .Values.cluster-south }}
