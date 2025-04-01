@@ -18,5 +18,4 @@ storageClass: "standard"
 volumeSize: "8000Mi"
 
 username: test@example.com
-admissionWebhook: true
 pullSecrets: secret
