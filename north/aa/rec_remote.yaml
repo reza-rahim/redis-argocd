@@ -1,0 +1,25 @@
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseRemoteCluster
+metadata:
+  name: rerc-north
+spec:
+  recName: rerc-north
+  recNamespace: redis
+  apiFqdnUrl: api.apps.rerc-north.ps-redis.com
+  dbFqdnSuffix: -cluster.apps.rerc-north.ps-redis.com
+  apiPort: 443
+  secretName: redis-enterprise-rerc-north
+
+---  
+
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseRemoteCluster
+metadata:
+  name: rerc-south
+spec:
+  recName: rerc-south
+  recNamespace: redis
+  apiFqdnUrl: api.apps.rerc-south.ps-redis.com
+  dbFqdnSuffix: -cluster.rerc-south.demo-4.ps-redis.com
+  apiPort: 443
+  secretName: redis-enterprise-rerc-south
