@@ -15,8 +15,13 @@ requests:
 nodes: 3
 storageClass: "standard"
 volumeSize: "8000Mi"
-apiIngressUrl: api.apps.norht.ps-redis.com
-dbIngressSuffix: -cluster.apps.north.ps-redis.com
+#North cluster
+apiIngressUrl: api.apps.rerc-north.ps-redis.com
+dbIngressSuffix: -cluster.apps.rerc-north.ps-redis.com
+
+#south cluster
+#apiIngressUrl: api.apps.rerc-south.ps-redis.com
+#dbIngressSuffix: -cluster.apps.rerc-south.ps-redis.com
 method: ingress
 ingressClass: nginx 
 username: test@example.com
