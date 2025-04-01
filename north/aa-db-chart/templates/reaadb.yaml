@@ -1,0 +1,14 @@
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseActiveActiveDatabase
+metadata:
+  name: reaadb
+spec:
+  globalConfigurations:
+    memorySize: 100MB
+    shardCount: 1
+    replication: True
+    databasePort: 13000
+    tlsMode: enabled 
+  participatingClusters:
+      - name: rerc-demo-1
+      - name: rerc-demo-4
