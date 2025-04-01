@@ -4,10 +4,10 @@ metadata:
   name: reaadb
 spec:
   globalConfigurations:
-    memorySize: 100MB
-    shardCount: 1
+    memorySize:  {{ .Values.memorySize }}
+    shardCount:  {{ .Values.shardCount }}
     replication: True
-    databasePort: 13000
+    databasePort:  {{ .Values.databasePort }}
     tlsMode: enabled 
   participatingClusters:
       - name: rerc-demo-1
