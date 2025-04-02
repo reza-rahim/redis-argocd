@@ -98,6 +98,19 @@ kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
 
 ---
 ## Active Active database
+
+
+## Deploy Active Active Redis Cluster
+### north/rec-aa-chart
+```
+rec-aa-chart/
+├── Chart.yaml
+├── dev-values.yaml
+├── prod-values.yaml
+├── templates/
+│   ├── rec.yaml
+```
+
 [Prepare participating clusters](https://redis.io/docs/latest/operate/kubernetes/active-active/prepare-clusters/)
 
 [Edit participating clusters for Active-Active database](https://redis.io/docs/latest/operate/kubernetes/active-active/edit-clusters/)
@@ -110,6 +123,16 @@ kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
 ```
 kubectl create -f rec_secret.yaml
 kubectl create -f rec_remote.yaml
+```
+
+## Deploy Redis Active Active Database
+```
+aa-db-chart/
+├── Chart.yaml
+├── dev-values.yaml
+├── prod-values.yaml
+├── templates/
+│   ├── reaadb.yaml
 ```
 
 
