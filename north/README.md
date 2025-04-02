@@ -111,6 +111,10 @@ rec-aa-chart/
 │   ├── rec.yaml
 ```
 
+```
+kubectl apply -f north/helm-dev-aa-redis-rec-argo.yaml
+```
+
 [Prepare participating clusters](https://redis.io/docs/latest/operate/kubernetes/active-active/prepare-clusters/)
 
 [Edit participating clusters for Active-Active database](https://redis.io/docs/latest/operate/kubernetes/active-active/edit-clusters/)
@@ -125,6 +129,8 @@ rec-aa-chart/
 kubectl create -f rec_secret.yaml
 kubectl create -f rec_remote.yaml
 ```
+
+
 
 ### Deploy Redis Active Active Database
 ```
