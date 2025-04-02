@@ -97,5 +97,10 @@ kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
 ```
 
 ---
+## Active Active database
+[Prepare participating clusters](https://redis.io/docs/latest/operate/kubernetes/active-active/prepare-clusters/)
+
+
+---
 ## Upgrade
 
