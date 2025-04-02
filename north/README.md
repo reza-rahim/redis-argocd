@@ -100,6 +100,17 @@ kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
 ## Active Active database
 [Prepare participating clusters](https://redis.io/docs/latest/operate/kubernetes/active-active/prepare-clusters/)
 
+[Edit participating clusters for Active-Active database](https://redis.io/docs/latest/operate/kubernetes/active-active/edit-clusters/)
+### Collect REC credentials
+[rec_secret.yaml](https://github.com/reza-rahim/redis-argocd/blob/main/north/aa/rec_secret.yaml)
+
+### Create RERC
+[rec_remote.yaml](https://github.com/reza-rahim/redis-argocd/blob/main/north/aa/rec_remote.yaml)
+
+
+
+
+
 
 ---
 ## Upgrade
