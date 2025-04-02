@@ -107,7 +107,10 @@ kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
 ### Create RERC
 [rec_remote.yaml](https://github.com/reza-rahim/redis-argocd/blob/main/north/aa/rec_remote.yaml)
 
-
+```
+kubectl create -f rec_secret.yaml
+kubectl create -f rec_remote.yaml
+```
 
 
 
