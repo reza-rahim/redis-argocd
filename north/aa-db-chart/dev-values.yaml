@@ -1,3 +1,5 @@
 memorySize: 100MB
 databasePort: 13000
 shardCount: 2
+cluster-north: rerc-north
+cluster-south: rerc-south
