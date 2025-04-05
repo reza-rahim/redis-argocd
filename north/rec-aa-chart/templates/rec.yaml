@@ -26,7 +26,7 @@ spec:
     repository: "{{ .Values.redisEnterpriseServicesRiggerImageSpec }}"  
   bootstrapperImageSpec:
     repository: "{{ .Values.bootstrapperImageSpec }}"
-  activeActive:
+  ingressOrRouteSpec:
     apiIngressUrl: {{ .Values.apiIngressUrl }}
     dbIngressSuffix:  {{ .Values.dbIngressSuffix }}
     method:  {{ .Values.method }}
