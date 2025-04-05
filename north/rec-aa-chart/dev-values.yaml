@@ -1,4 +1,4 @@
-recname: rec
+recname: rec-north
 nodes: 3
 
 redisEnterpriseImageSpec: redislabs/redis
