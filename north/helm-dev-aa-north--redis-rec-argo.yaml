@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rec-aa-chart         # Name of the ArgoCD application
+  name: rec-aa-north-chart         # Name of the ArgoCD application
   namespace: argocd             # Namespace where ArgoCD is installed
 spec:
   project: default              # ArgoCD project (default unless specified)
@@ -14,7 +14,7 @@ spec:
       - dev-values.yaml
   destination:
     server: https://kubernetes.default.svc  # Points to the in-cluster Kubernetes API
-    namespace: dev                      #Namespace to deploy the application
+    namespace: north                      #Namespace to deploy the application
   #syncPolicy: {} # manual sync
   syncPolicy: 
     automated:                      # Enables automatic sync
