@@ -62,6 +62,7 @@ kubectl patch -n dev  rec/rec --type=merge -p '{"metadata": {"finalizers":null}}
 
 # delete pvc 
 kubectl delete  -n dev pvc redis-enterprise-storage-rec-0  redis-enterprise-storage-rec-1 redis-enterprise-storage-rec-2
+kubectl delete  -n north  pvc redis-enterprise-storage-rec-north-0  redis-enterprise-storage-rec-north-1 redis-enterprise-storage-rec-north-2
 
 #log into a pod
 kubectl exec  -it -c redis-enterprise-node  -n dev rec-0 -- bash
