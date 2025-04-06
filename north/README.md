@@ -96,7 +96,7 @@ db-2-chart/
 #kubectl apply  -n argocd -f helm-dev-redis-db-1-argo.yaml
 #kubectl apply  -n argocd -f helm-dev-redis-db-2-argo.yaml
 kubectl apply -n north -f https://raw.githubusercontent.com/reza-rahim/redis-argocd/refs/heads/main/north/aa/rec_secret.yaml
-
+kubectl apply -n north -f https://raw.githubusercontent.com/reza-rahim/redis-argocd/refs/heads/main/north/aa/rec_remote.yaml
 ```
 
 ---
