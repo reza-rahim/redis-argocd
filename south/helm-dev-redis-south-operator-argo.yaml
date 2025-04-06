@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: redis-operetor-dev          # Name of the ArgoCD application
+  name: redis-operetor-south          # Name of the ArgoCD application
   namespace: argocd             # Namespace where ArgoCD is installed
 spec:
   project: default              # ArgoCD project (default unless specified)
   source:
     repoURL: https://github.com/reza-rahim/argocd_public/  # Replace with your Git repository
     targetRevision: main         # Branch, tag, or commit SHA to deploy
-    path: north/operator-chart  # Path to the directory containing Kubernetes YAMLs
+    path: south/operator-chart  # Path to the directory containing Kubernetes YAMLs
     helm:
       valueFiles:
       - dev-values.yaml
