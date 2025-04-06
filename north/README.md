@@ -112,7 +112,7 @@ rec-aa-chart/
 ```
 
 ```
-kubectl apply -f north/helm-dev-aa-redis-rec-argo.yaml
+kubectl apply -f north/helm-dev-aa-north-redis-rec-argo.yaml
 ```
 
 [Prepare participating clusters](https://redis.io/docs/latest/operate/kubernetes/active-active/prepare-clusters/)
