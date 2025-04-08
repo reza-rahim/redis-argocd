@@ -149,7 +149,10 @@ aa-db-chart/
 ### Manage databases in multiple namespaces
 [Manage databases in multiple namespaces](https://redis.io/docs/latest/operate/kubernetes/re-clusters/multi-namespace/)
 
+```
+kubectl apply -n argocd -f north/helm-dev-managed-db-argo.yaml
 
+```
 ---
 ## Upgrade
 
