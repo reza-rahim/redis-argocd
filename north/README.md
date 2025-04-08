@@ -145,7 +145,8 @@ aa-db-chart/
 │   ├── reaadb.yaml
 ```
 
-
+---
+[Manage databases in multiple namespaces](https://redis.io/docs/latest/operate/kubernetes/re-clusters/multi-namespace/)
 
 
 ---
