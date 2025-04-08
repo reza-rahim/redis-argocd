@@ -6,7 +6,7 @@ metadata:
     app: redis-enterprise
 subjects:
 - kind: ServiceAccount
-  name: redis_enterprise_operator
+  name: redis-enterprise-operator
   namespace: {{ .Values.rec_namespace  }} 
 - kind: ServiceAccount
   name: <service-account-name>
