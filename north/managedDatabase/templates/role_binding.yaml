@@ -9,7 +9,7 @@ subjects:
   name: redis-enterprise-operator
   namespace: {{ .Values.rec_namespace  }} 
 - kind: ServiceAccount
-  name: <service-account-name>
+  name: {{ .Values.rec_name  }} 
   namespace: {{ .Values.rec_namespace }} 
 roleRef:
   kind: Role
