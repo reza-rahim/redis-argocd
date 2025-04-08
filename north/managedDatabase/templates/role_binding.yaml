@@ -7,10 +7,10 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: redis-enterprise-operator
-  namespace: {{ .Values.rec_namespace  }} 
+  namespace: {{ .Values.db_namespace  }} 
 - kind: ServiceAccount
   name: {{ .Values.rec_name  }} 
-  namespace: {{ .Values.rec_namespace }} 
+  namespace: {{ .Values.db_namespace }} 
 roleRef:
   kind: Role
   name: redb-role
