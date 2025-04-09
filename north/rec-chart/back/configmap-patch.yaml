@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: patch-configmap
-  namespace:  prod
+  namespace:  {{ .Values.recNamespace  }}
   annotations:
     "helm.sh/hook": post-install
     "helm.sh/hook-delete-policy": before-hook-creation
@@ -17,6 +17,6 @@ spec:
             - "/bin/bash"
             - "-c"
             - >
-              kubectl patch ConfigMap/operator-environment-config -n prod --type merge -p '{"data": {"REDB_NAMESPACES_LABEL": "dev"}}'
+              kubectl patch ConfigMap/operator-environment-config --type merge -p '{"data": {"REDB_NAMESPACES": "{{ .Values.ManagedNameSpace }}"}}'
       restartPolicy: Never
   backoffLimit: 1
