@@ -2,17 +2,20 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: patch-configmap
-  namespace: {{ .Values.recNamespace }}
+  namespace:  prod
   annotations:
     "helm.sh/hook": post-install
     "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   template:
     spec:
+      serviceAccount: redis-enterprise-operator
       containers:
         - name: patch
           image: bitnami/kubectl:latest
-          command: ["/bin/sh"]
-          args: ["-c", "kubectl patch ConfigMap/operator-environment-config -n prod   --type merge -p '{"data":{"REDB_NAMESPACES": "dev,stg"}}' "] 
+          command:
+            - "/bin/bash"
+            - "-c"
+            - "kubectl patch ConfigMap/operator-environment-config -n <rec-namespace> --type merge -p '{"data": {"REDB_NAMESPACES_LABEL": "kalu"}}'"
       restartPolicy: Never
   backoffLimit: 1
