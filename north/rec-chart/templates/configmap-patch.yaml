@@ -12,13 +12,7 @@ spec:
       containers:
         - name: patch
           image: bitnami/kubectl:latest
-          command:
-            - /bin/sh
-            - -c
-            - >
-              kubectl patch ConfigMap/operator-environment-config
-              -n {{ .Values.recNamespace }}
-              --type merge
-              -p '{"data": {"REDB_NAMESPACES_LABEL": "{{ .Values.ManagedNameSpace }}"}}'
+          command: ["/bin/sh"]
+          args: ["-c", "kubectl patch ConfigMap/operator-environment-config -n prod   --type merge -p '{"data":{"REDB_NAMESPACES": "dev,stg"}}' "] 
       restartPolicy: Never
   backoffLimit: 1
