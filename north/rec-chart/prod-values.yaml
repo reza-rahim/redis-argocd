@@ -1,4 +1,4 @@
 recNamespace: prod
 recname: rec
 nodes: 3
-ManagedNameSpace: dev, dev2
+ManagedNameSpace: dev, dev2, dev3
