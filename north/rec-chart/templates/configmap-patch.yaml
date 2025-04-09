@@ -19,6 +19,6 @@ spec:
               kubectl patch ConfigMap/operator-environment-config
               -n {{ .Values.recNamespace }}
               --type merge
-              -p '{"data": {"REDB_NAMESPACES_LABEL": " "
+              -p '{"data": {"REDB_NAMESPACES_LABEL": "{{ .Values.ManagedNameSpace }}"}}'
       restartPolicy: Never
   backoffLimit: 1
