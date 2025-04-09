@@ -16,6 +16,6 @@ spec:
           command:
             - "/bin/bash"
             - "-c"
-            - "kubectl patch ConfigMap/operator-environment-config -n <rec-namespace> --type merge -p '{"data": {"REDB_NAMESPACES_LABEL": "kalu"}}'"
+            - "kubectl patch ConfigMap/operator-environment-config -n prod --type merge -p '{"data": {"REDB_NAMESPACES_LABEL": "kalu"}}'"
       restartPolicy: Never
   backoffLimit: 1
