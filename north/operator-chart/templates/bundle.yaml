@@ -104,6 +104,7 @@ rules:
       - update
       - watch
       - list
+      - patch
   - apiGroups:
       - ""
     resources:
