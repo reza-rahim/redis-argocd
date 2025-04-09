@@ -19,3 +19,4 @@ volumeSize: "8000Mi"
 
 username: test@example.com
 pullSecrets: secret
+ManagedNameSpace: dev
