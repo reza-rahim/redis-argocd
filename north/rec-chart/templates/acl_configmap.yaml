@@ -10,7 +10,7 @@ data:
     -d '{ "name": "abc-acl", "acl": "~abc* +@all -@dangerous" }' \
     https://{{ .Values.recname  }}:9443/v1/redis_acls
 
-    # Create abc-role
+    # Create abc-role role_uids=2
     curl -k -u "$USERNAME:$PASSWORD" -X POST \
     -H 'Content-Type: application/json' \
     -d '{"management":"none","name":"abc-role"}' \
