@@ -16,12 +16,7 @@ data:
     -d '{"management":"none","name":"abc-role"}' \
     https://rec:9443/v1/roles
 
-    # Create a User with a Database Role
-    curl -k -X POST -u '$USERNAME:$PASSWORD' \
-    -H 'Content-Type: application/json' \
-    -d '{ "email": "newuser@example.com", "password": "1234", "name": "abc-user",
-    "role_uids": [ 5 ], "auth_method": "regular" }' \
-    https://rec:9443/v1/users
+  
     
 
     
