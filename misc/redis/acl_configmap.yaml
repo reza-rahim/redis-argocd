@@ -4,9 +4,26 @@ metadata:
   name: redis-acl-config
 data:
   config.txt: |
+    # Create an ACL for key prefix abc
     curl -k -u "$USERNAME:$PASSWORD" -X POST \
     -H 'Content-Type: application/json' \
     -d '{ "name": "abc-acl", "acl": "~abc* +@all -@dangerous" }' \
     https://rec:9443/v1/redis_acls
+
+   # Create abc-role
+   curl -k -u "<username>:<password>" -X POST \
+   -H 'Content-Type: application/json' \
+   -d '{"management":"none","name":"abc-role"}' \
+   https://localhost:9443/v1/roles
+
+   # Create a User with a Database Role
+   curl -k -X POST -u 'demo@redis.com:MLDU2Pw8' \
+   -H 'Content-Type: application/json' \
+   -d '{ "email": "newuser@example.com", "password": "1234", "name": "abc-user",
+   "role_uids": [ 5 ], "auth_method": "regular" }' \
+   https://localhost:9443/v1/users
+    
+
+    
 
     
