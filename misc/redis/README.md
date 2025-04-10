@@ -13,7 +13,7 @@ kubectl describe   -n $NS po redis-pod
 
 kubectl exec  -n $NS  -it redis-pod -- sh
 
-kubectl delete  -n $NS po  redis-pod #--grace-period=0 --force
+kubectl delete  -n $NS po  redis-pod --grace-period=0 --force
 ```
 
 ```
