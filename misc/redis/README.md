@@ -1,13 +1,17 @@
 ```
 
+export NS=prod
 
-kubectl apply -n prod -f redis-pod.yaml
-kubectl logs -n prod redis-po
-kubectl describe  -n prod po redis-pod
+kubectl apply -n $NS -f https://raw.githubusercontent.com/reza-rahim/redis-argocd/refs/heads/main/misc/redis/acl_configmap.yaml
 
-kubectl exec -n prod  -it redis-pod -- sh
+kubectl apply -n $NS -f https://raw.githubusercontent.com/reza-rahim/redis-argocd/refs/heads/main/misc/redis/redis-pod.yaml
 
-kubectl delete -n prod -f redis-pod.yaml --grace-period=0 --force
+kubectl logs  -n $NS redis-pod
+kubectl describe   -n $NS po redis-pod
+
+kubectl exec  -n $NS  -it redis-pod -- sh
+
+kubectl delete  -n $NS -f redis-pod.yaml --grace-period=0 --force
 ```
 
 ```
