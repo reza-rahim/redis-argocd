@@ -15,5 +15,5 @@ curl -k -u "$USERNAME:$PASSWORD" https://rec:9443/v1/cluster
 ```
 
 ```
-kubectl apply -n prod -f  configmap.yaml
+kubectl apply -n prod -f acl_configmap.yaml
 ```
