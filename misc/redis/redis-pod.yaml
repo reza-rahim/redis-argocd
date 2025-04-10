@@ -6,29 +6,29 @@ spec:
   containers:
   - name: app
     image: alpine/curl
-    command: 
-     - "/bin/sh"
-     - "-c"
-     - |
-      count=0
-      max=125
-      while true; do
-        curl -k -u "$USERNAME:$PASSWORD" https://rec:9443/v1/cluster
-        if [ $? -eq 0 ]; then
-          echo " Curl succeeded, breaking loop."
-          break
-        else
-          echo " Curl failed, retrying in 5 seconds... ($count/$max)"
-          sleep 10
-        fi
+    command:
+      - "/bin/sh"
+      - "-c"
+      - |
+        count=0
+        max=125
+        while true; do
+          curl -k -u "$USERNAME:$PASSWORD" https://rec:9443/v1/cluster
+          if [ $? -eq 0 ]; then
+            echo "Curl succeeded, breaking loop."
+            break
+          else
+            echo "Curl failed, retrying in 5 seconds... ($count/$max)"
+            sleep 10
+          fi
 
-        count=$((count + 1))
-        if [ "$count" -ge "$max" ]; then
-          echo " Reached max retries ($max), exiting loop."
-          break
-        fi
-      done
-      sleep 3600
+          count=$((count + 1))
+          if [ "$count" -ge "$max" ]; then
+            echo "Reached max retries ($max), exiting loop."
+            break
+          fi
+        done
+        sleep 3600
     env:
     - name: USERNAME
       valueFrom:
@@ -40,3 +40,10 @@ spec:
         secretKeyRef:
           name: rec
           key: password
+    volumeMounts:
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: redis-config
