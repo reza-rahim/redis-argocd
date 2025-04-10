@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: redis-pod
 spec:
-  serviceAccount: redis-enterprise-operator
+  
   containers:
   - name: app
     image: alpine/curl
