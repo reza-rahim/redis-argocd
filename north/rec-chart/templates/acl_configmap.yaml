@@ -15,3 +15,8 @@ data:
     -H 'Content-Type: application/json' \
     -d '{"management":"none","name":"abc-role"}' \
     https://{{ .Values.recname  }}:9443/v1/roles
+
+    #
+    curl -k -u "$USERNAME:$PASSWORD" -X POST   \
+    -H 'Content-Type: application/json' -d '{ "email": "newuser@example.com", "password": "1234", "name": "abc-user", "role_uids": [ 2 ], "auth_method": "regular" }' \
+    https://rec-prod:9443/v1/users
