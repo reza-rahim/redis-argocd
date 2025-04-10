@@ -30,7 +30,7 @@ spec:
           fi
         done
         
-        #source /etc/config/config.txt
+        source /etc/config/config.txt
         sleep 3600
     env:
     - name: USERNAME
