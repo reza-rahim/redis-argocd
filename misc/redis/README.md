@@ -7,7 +7,7 @@ kubectl describe  -n prod po redis-pod
 
 kubectl exec -n prod  -it redis-pod -- sh
 
-kubectl delete -n prod -f pod.yaml --grace-period=0 --force
+kubectl delete -n prod -f redis-pod.yaml --grace-period=0 --force
 ```
 
 ```
