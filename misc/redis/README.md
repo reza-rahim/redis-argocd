@@ -4,6 +4,8 @@ export NS=prod
 
 kubectl apply -n $NS -f https://raw.githubusercontent.com/reza-rahim/redis-argocd/refs/heads/main/misc/redis/acl_configmap.yaml
 
+kubectl get -n $NS ConfigMap redis-acl-config  
+
 kubectl apply -n $NS -f https://raw.githubusercontent.com/reza-rahim/redis-argocd/refs/heads/main/misc/redis/redis-pod.yaml
 
 kubectl logs  -n $NS redis-pod
