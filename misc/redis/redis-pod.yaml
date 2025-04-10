@@ -29,6 +29,7 @@ spec:
           fi
         done
         #sleep 3600
+        #source /etc/config/config.txt
     env:
     - name: USERNAME
       valueFrom:
