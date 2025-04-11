@@ -6,7 +6,7 @@ spec:
   
   containers:
   - name: app
-    image: alpine/curl
+    image: rezarahim/alpine-tools:1.1
     command:
       - "/bin/sh"
       - "-c"
