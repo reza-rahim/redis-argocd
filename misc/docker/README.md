@@ -1,5 +1,5 @@
 
 ```
 docker build -t rezarahim/alpine-tools .
-docker push
+docker push  rezarahim/alpine-tools
 ```
