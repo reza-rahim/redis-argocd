@@ -13,6 +13,6 @@ kubectl get secret -n $NS  rsa-keys -o yaml
 ```
 
 ```
-openssl pkeyutl  -encrypt -inkey public_key.pem -pubin -in secret.txt -out encrypted.bin
+echo "password" | openssl pkeyutl  -encrypt -inkey public_key.pem -pubin  -out encrypted.bin
 openssl rsa -pubout -in private_key.pem -out public_key.pem
 ```
