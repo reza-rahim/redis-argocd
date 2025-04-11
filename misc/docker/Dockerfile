@@ -1,16 +1,26 @@
 # Use Alpine as base image
-FROM python:3-alpine
+FROM alpine
 
 # Install dependencies
 RUN apk add --no-cache \
+    python3 \
+    py3-pip \
     curl \
-    openssl \
- && pip install awscli
+    openssl
+
+
+# Create a virtualenv and install tools in it
+RUN python3 -m venv /opt/venv \
+ && . /opt/venv/bin/activate \
+ && pip install awscli redis
+
+
+# Set PATH so commands like `aws` and `python` work globally
+ENV PATH="/opt/venv/bin:$PATH"
 
 # Create non-root user
 RUN adduser -D appuser
-
-# Set working directory and switch to user
 USER appuser
 WORKDIR /home/appuser
 
+RUN pip install awscli redis
