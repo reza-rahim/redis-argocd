@@ -18,6 +18,6 @@ openssl rsa -pubout -in private_key.pem -out public_key.pem
 ```
 
 ```
-kubectl get secret rsa-keys -n prod -o jsonpath='{.data.private_key\.pem}' | base64 -d) 
-kubectl get secret rsa-keys -n prod -o jsonpath='{.data.public_key\.pem}' | base64 -d) 
+kubectl get secret rsa-keys -n prod -o jsonpath='{.data.private_key\.pem}' | base64 -d) > private_key.pem
+kubectl get secret rsa-keys -n prod -o jsonpath='{.data.public_key\.pem}' | base64 -d) > public_key.pem
 ```
