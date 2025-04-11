@@ -14,5 +14,3 @@ RUN adduser -D appuser
 USER appuser
 WORKDIR /home/appuser
 
-# Set default shell
-CMD ["/bin/sh"]
