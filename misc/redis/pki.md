@@ -16,3 +16,8 @@ kubectl get secret -n $NS  rsa-keys -o yaml
 echo "password" | openssl pkeyutl  -encrypt -inkey public_key.pem -pubin  -out encrypted.bin
 openssl rsa -pubout -in private_key.pem -out public_key.pem
 ```
+
+```
+kubectl get secret rsa-keys -n prod -o jsonpath='{.data.private_key\.pem}' | base64 -d) 
+kubectl get secret rsa-keys -n prod -o jsonpath='{.data.public_key\.pem}' | base64 -d) 
+```
