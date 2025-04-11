@@ -32,7 +32,7 @@ kubectl create secret generic -n $NS --rm aws-credentials \
 ```
 
 ```
-kubectl run -it --rm -n prod aws-shell \
+kubectl run -it --rm -n prod k8-shell \
   --image=rezarahim/alpine-tools:1.1 \
   --restart=Never \
   --env AWS_ACCESS_KEY_ID=$(kubectl get secret aws-credentials -n prod -o jsonpath='{.data.AWS_ACCESS_KEY_ID}' | base64 -d) \
