@@ -69,9 +69,15 @@ spec:
               name: rsa-keys
               key: public_key.pem
         volumeMounts:
-        - name: config-volume
-          mountPath: /etc/config
+        - name: config-volume-rec
+          mountPath: /etc/config/rec
+        - name: config-volume-acl
+          mountPath: /etc/config/acl  
       volumes:
-      - name: config-volume
+       - name: config-volume-rec
         configMap:
-          name: redis-acl-config
+          name: config_map_rec
+      - name: config-volume-acl
+        configMap:
+          name: config_map_acl
+          
