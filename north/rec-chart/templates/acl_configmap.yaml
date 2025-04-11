@@ -18,5 +18,5 @@ data:
 
     #
     curl -k -u "$USERNAME:$PASSWORD" -X POST   \
-    -H 'Content-Type: application/json' -d '{ "email": "newuser@example.com", "password": "1234", "name": "health-check-user", "role_uids": [ 2 ], "auth_method": "regular" }' \
+    -H 'Content-Type: application/json' -d '{ "email": "health-check-user@example.com", "password": "1234", "name": "health-check-user", "role_uids": [ 2 ], "auth_method": "regular" }' \
     https://rec-prod:9443/v1/users
