@@ -23,3 +23,11 @@ curl -k -u "$USERNAME:$PASSWORD" https://rec:9443/v1/cluster
 ```
 kubectl apply -n prod -f acl_configmap.yaml
 ```
+
+### AWK key
+```
+kubectl create secret generic -n $NS --rm aws-credentials \
+  --from-literal=AWS_ACCESS_KEY_ID=your-access-key-id \
+  --from-literal=AWS_SECRET_ACCESS_KEY=your-secret-access-key
+  -- sh
+```
