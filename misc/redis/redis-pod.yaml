@@ -36,12 +36,12 @@ spec:
     - name: USERNAME
       valueFrom:
         secretKeyRef:
-          name: rec
+          name: rec-prod
           key: username
     - name: PASSWORD
       valueFrom:
         secretKeyRef:
-          name: rec
+          name: rec-prod
           key: password
     - name: AWS_ACCESS_KEY_ID
       valueFrom:
