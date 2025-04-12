@@ -6,7 +6,8 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     curl \
-    openssl
+    openssl \
+    kubectl
 
 
 # Create a virtualenv and install tools in it
