@@ -20,3 +20,16 @@ jq -c '.[]' cluster_config.json | while read -r item; do
 done
 
 ```
+
+```
+#!/bin/sh
+jq -c '.[]' cluster_config.json | while read -r item; do
+  eval $(echo "$item" | jq -r 'to_entries|map("\(.key)=\(.value|@sh)")|.[]')
+
+  # Example usage:
+  echo "clusername: $clusername, s3_dir: $s3_dir, primary: $primary"
+  rm -f username.bin passwd.bin
+  aws s3 cp  s3://$S3_BUCKET/$s3_dir/username.bin /tmp/username.bin
+  aws s3 cp  s3://$S3_BUCKET/$s3_dir/passwd.bin /tmp/passwd.bin
+done
+```
