@@ -16,7 +16,7 @@ RUN python3 -m venv /opt/venv \
  && pip install awscli redis
 
 
-# Set PATH so commands like `aws` and `python` work globally
+# Set PATH so commands like aws and python work globally
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Create non-root user
