@@ -1,4 +1,18 @@
 ```
+[
+  {
+    "clusername": "south",
+    "s3_dir": "south",
+    "primary": true
+  },
+  {
+    "clusername": "north",
+    "s3_dir": "north",
+    "primary": false
+  }
+]
+```
+```
 
 aws s3 cp s3://redis-argocd-bank/cluster_config.json ./cluster_config.json
 
