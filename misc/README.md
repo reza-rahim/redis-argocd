@@ -51,5 +51,13 @@ jq -c '.[]' cluster_config.json | while read -r item; do
   export PASSWD=$(openssl pkeyutl -decrypt -inkey private_key.pem -in /tmp/passwd.bin | base64 )
   echo $USERNAME $PASSWD
 
+  kubectl create secret generic -n $namespace $clusername\
+  --from-literal=username="$USERNAME" \
+  --from-literal=password="$PASSWD"
+
 done
+```
+
+```
+
 ```
