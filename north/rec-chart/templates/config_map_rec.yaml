@@ -4,5 +4,9 @@ metadata:
   name: redis-acl-config
 data:
   rec_config_map.sh: |
+     export REC_NAME=south
      export S3_REC_BUCKET={{ .Values.s3RecBucket  }}
+     export S3_REC_Dir={{ .Values.s3RecDir  }}
+     export Primary=no
+     export 
      
