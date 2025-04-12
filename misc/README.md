@@ -59,5 +59,32 @@ done
 ```
 
 ```
+#!/bin/bash
 
+while true; do
+  all_found=true
+
+  # Loop over each cluster item in the JSON
+  while IFS= read -r item; do
+    eval $(echo "$item" | jq -r 'to_entries | map("\(.key)=\(.value|@sh)") | .[]')
+
+    echo "🔍 Checking: s3://$S3_BUCKET/$s3_dir/username.bin"
+
+    if ! aws s3 ls "s3://$S3_BUCKET/$s3_dir/username.bin" > /dev/null 2>&1; then
+      echo "Not found: $s3_dir/username.bin"
+      all_found=false
+    else
+      echo " Found: $s3_dir/username.bin"
+    fi
+  done < <(jq -c '.[]' cluster_config.json)
+
+  # Exit only if all files were found
+  if [ "$all_found" = true ]; then
+    echo "All required S3 files are present!"
+    break
+  fi
+
+  echo " Some files not ready yet, retrying in 5 seconds..."
+  sleep 30
+done
 ```
