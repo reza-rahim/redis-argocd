@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-rerc-config
+data:
+  rerc_config_map.sh: |
+    kubectl create secret generic redis-enterprise-rerc-{{ .Value.recName }} \
+    --from-literal=username="$USERNAME" \
+    --from-literal=password="$PASSWORD"
+      
