@@ -31,5 +31,10 @@ jq -c '.[]' cluster_config.json | while read -r item; do
   rm -f username.bin passwd.bin
   aws s3 cp  s3://$S3_BUCKET/$s3_dir/username.bin /tmp/username.bin
   aws s3 cp  s3://$S3_BUCKET/$s3_dir/passwd.bin /tmp/passwd.bin
+
+  export USERNAME=$(openssl pkeyutl -decrypt -inkey private_key.pem -in /tmp/username.bin | base64 )
+  export PASSWD=$(openssl pkeyutl -decrypt -inkey private_key.pem -in /tmp/passwd.bin | base64 )
+  echo $USERNAME $PASSWD
+
 done
 ```
