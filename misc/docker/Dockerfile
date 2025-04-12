@@ -24,4 +24,3 @@ RUN adduser -D appuser
 USER appuser
 WORKDIR /home/appuser
 
-RUN pip install awscli redis
