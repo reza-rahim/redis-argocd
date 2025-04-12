@@ -8,3 +8,6 @@ data:
     --from-literal=username="$USERNAME" \
     --from-literal=password="$PASSWORD"
       
+    kubectl create secret generic redis-enterprise-rerc-{{ .Value.recName }} \
+    --from-literal=username="$USERNAME" \
+    --from-literal=password="$PASSWORD"
